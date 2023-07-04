@@ -52,7 +52,7 @@
             // loadExistingTournamentDropdown
             // 
             this.loadExistingTournamentDropdown.FormattingEnabled = true;
-            this.loadExistingTournamentDropdown.Location = new System.Drawing.Point(166, 252);
+            this.loadExistingTournamentDropdown.Location = new System.Drawing.Point(181, 245);
             this.loadExistingTournamentDropdown.Margin = new System.Windows.Forms.Padding(4);
             this.loadExistingTournamentDropdown.Name = "loadExistingTournamentDropdown";
             this.loadExistingTournamentDropdown.Size = new System.Drawing.Size(670, 53);
@@ -118,6 +118,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "CreateTournamentDashboardForm";
             this.Text = "Tournament Dashboard";
+            this.Load += new System.EventHandler(this.CreateTournamentDashboardForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
