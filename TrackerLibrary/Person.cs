@@ -7,7 +7,7 @@ public interface IPerson
     public string LastName { get; set; }
     public string MiddleName { get; set; }
     public string Gender { get; set; }
-    public GetProfile {}
+    public void GetProfile() {}
 }
 
 public class Person : IPerson
@@ -31,7 +31,7 @@ public class Person : IPerson
     public string Gender { get { return Gender; } set { Gender = value; } }
 
     // GetProfile should return the details - FirstName, LastName, MiddleName and Gender
-    public GetProfile {
+    public string GetProfile() {
         return $"FirstName: {firstName}, LastName: {lastName}, MiddleName: {middleName}, Gender: {gender}";       
     }
 
