@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TrackerLibrary;
+
 namespace TrackerUI
 {
     public partial class CreatePrizeForm : Form
@@ -19,14 +21,27 @@ namespace TrackerUI
 
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
+            if (ValidateForm())
+            {
+                PrizeModel model = new PrizeModel(
+                    placeNameValue.Text,
+                    placeNumberValue.Text,
+                    prizeAmountValue.Text,
+                    prizePercentageValue.Text);
 
+                foreach (IDataConnection db in GlobalConfig.Connections)
+                {
+                    db.CreatePrize(model);
+                }
+
+            }
         }
 
         private bool ValidateForm()
         {
+            // 5:00:00
             bool output = true;
             int placeNumber = 0;
-            // 5:00:00
             bool PlaceNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
 
             if (!PlaceNumberValidNumber)
@@ -46,12 +61,25 @@ namespace TrackerUI
             }
 
             decimal prizeAmount = 0;
-            int prizePercentage = 0;
+            double prizePercentage = 0;
 
             bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
+            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out prizePercentage);
 
+            if (prizeAmountValid == false || prizePercentageValid == false)
+            {
+                output = false;
+            }
 
-            if ()
+            if (prizeAmount <= 0 && prizePercentage <= 0)
+            {
+                output = false;
+            }
+
+            if (prizePercentage < 0 || prizePercentage > 100)
+            {
+
+            }
 
             return output;
         }
