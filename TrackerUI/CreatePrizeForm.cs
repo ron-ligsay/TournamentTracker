@@ -25,21 +25,40 @@ namespace TrackerUI
         private bool ValidateForm()
         {
             bool output = true;
-            int palceNumber = 0;
+            int placeNumber = 0;
             // 5:00:00
-            bool PlaceNumberValidNumber = int.TryParse(placeNumberValue.Text, out palceNumber);
+            bool PlaceNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
 
             if (!PlaceNumberValidNumber)
             {
                 output = false;
+                // you can add loging error report
             }
 
-            if (PlaceNumberValidNumber < 1)
+            if (placeNumber < 1)
             {
                 output = false;
             }
 
+            if (placeNameValue.Text.Length == 0) 
+            {
+                output = false;
+            }
+
+            decimal prizeAmount = 0;
+            int prizePercentage = 0;
+
+            bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
+
+
+            if ()
+
             return output;
+        }
+
+        private void placeNumberLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
