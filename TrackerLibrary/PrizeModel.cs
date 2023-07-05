@@ -16,7 +16,7 @@ namespace TrackerLibrary
         /// <summary>
         /// THe numeric identifier for the place (2 for second place, etc.)
         /// </summary>
-        public int PrizeNumber { get; set; }
+        public int PlaceNumber { get; set; }
 
         /// <summary>
         /// The friendly name for the place (second place, first runner up, etc.)
@@ -34,6 +34,28 @@ namespace TrackerLibrary
         /// </summary>
         public double PrizePercentage { get; set; }
 
+        public PrizeModel()
+        {
+            
+        }
 
+        public PrizeModel(string placeName, string placeNumber, string prizeAmount, string prizePercentage)
+        {
+            PlaceName = placeName;
+
+            int placeNumberValue = 0;
+            int.TryParse(placeNumber, out placeNumberValue);
+            PlaceNumber = placeNumberValue;
+
+            decimal prizeAmountValue = 0;
+            decimal.TryParse(prizeAmount, out prizeAmountValue);
+            PrizeAmount = prizeAmountValue;
+
+            double prizePercentageValue = 0;
+            double.TryParse(prizePercentage, out prizePercentageValue);
+            PrizePercentage = prizePercentageValue;
+        }
     }
+
+
 }
