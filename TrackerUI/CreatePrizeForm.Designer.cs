@@ -50,7 +50,7 @@
             this.headerLabel.Location = new System.Drawing.Point(74, 73);
             this.headerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(470, 111);
+            this.headerLabel.Size = new System.Drawing.Size(313, 74);
             this.headerLabel.TabIndex = 12;
             this.headerLabel.Text = "Create Prize";
             // 
@@ -89,7 +89,7 @@
             this.placeNameLabel.Location = new System.Drawing.Point(78, 273);
             this.placeNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.placeNameLabel.Name = "placeNameLabel";
-            this.placeNameLabel.Size = new System.Drawing.Size(345, 81);
+            this.placeNameLabel.Size = new System.Drawing.Size(230, 54);
             this.placeNameLabel.TabIndex = 26;
             this.placeNameLabel.Text = "Place Name";
             // 
@@ -127,7 +127,7 @@
             this.priceAmountLabel.Location = new System.Drawing.Point(78, 348);
             this.priceAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priceAmountLabel.Name = "priceAmountLabel";
-            this.priceAmountLabel.Size = new System.Drawing.Size(393, 81);
+            this.priceAmountLabel.Size = new System.Drawing.Size(262, 54);
             this.priceAmountLabel.TabIndex = 28;
             this.priceAmountLabel.Text = "Price Amount";
             // 
@@ -139,7 +139,7 @@
             this.orLabel.Location = new System.Drawing.Point(368, 445);
             this.orLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orLabel.Name = "orLabel";
-            this.orLabel.Size = new System.Drawing.Size(138, 81);
+            this.orLabel.Size = new System.Drawing.Size(92, 54);
             this.orLabel.TabIndex = 32;
             this.orLabel.Text = "-or-";
             // 
