@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,14 @@ namespace TrackerLibrary.DataAccess
         {
             // throw new NotImplementedException();
             // 4:43:31 database tables
-            model.Id = 1;
+            // model.Id = 1;
+            // return model;
 
-            return model;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            {
+                // 6:05 sql saving procedure
+            }
+            return null;
         }
     }
 }
