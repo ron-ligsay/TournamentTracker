@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class PrizeModel
     {
@@ -22,7 +22,7 @@ namespace TrackerLibrary
         /// The friendly name for the place (second place, first runner up, etc.)
         /// </summary>
         public string PlaceName { get; set; }
-        
+
         /// <summary>
         /// The fixed amount this place cares or zero if it is not used.
         /// </summary>
@@ -36,7 +36,7 @@ namespace TrackerLibrary
 
         public PrizeModel()
         {
-            
+
         }
 
         public PrizeModel(string placeName, string placeNumber, string prizeAmount, string prizePercentage)
