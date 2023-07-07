@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TrackerLibrary.Models;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.DataAccess
 {
     // this has a contract to the IDataConnection and this should have all methods of the contract
     public class SQLConnector : IDataConnection
@@ -26,4 +26,3 @@ namespace TrackerLibrary
         }
     }
 }
- 

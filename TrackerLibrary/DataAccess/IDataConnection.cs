@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using TrackerLibrary.Models;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.DataAccess
 {
     // contract
     public interface IDataConnection
     {
         PrizeModel CreatePrize(PrizeModel model);
-         
+
     }
 }
