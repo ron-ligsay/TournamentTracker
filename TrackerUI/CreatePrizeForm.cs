@@ -14,6 +14,9 @@ namespace TrackerUI
 {
     public partial class CreatePrizeForm : Form
     {
+     /// <summary>
+     /// Creating Prize Form
+     /// </summary>
         public CreatePrizeForm()
         {
             InitializeComponent();
@@ -41,8 +44,14 @@ namespace TrackerUI
         {
             // 5:00:00
             bool output = true;
+
             int placeNumber = 0;
+            decimal prizeAmount = 0;
+            double prizePercentage = 0;
+
             bool PlaceNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
+            bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
+            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out prizePercentage);
 
             if (!PlaceNumberValidNumber)
             {
@@ -60,11 +69,6 @@ namespace TrackerUI
                 output = false;
             }
 
-            decimal prizeAmount = 0;
-            double prizePercentage = 0;
-
-            bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
-            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out prizePercentage);
 
             if (prizeAmountValid == false || prizePercentageValid == false)
             {
@@ -85,6 +89,11 @@ namespace TrackerUI
         }
 
         private void placeNumberLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreatePrizeForm_Load(object sender, EventArgs e)
         {
 
         }

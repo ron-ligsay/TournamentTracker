@@ -12,6 +12,9 @@ namespace TrackerUI
 {
     public partial class CreateTournamentDashboardForm : Form
     {
+        /// <summary>
+        /// Tournament Dashboard
+        /// </summary>
         public CreateTournamentDashboardForm()
         {
             InitializeComponent();
