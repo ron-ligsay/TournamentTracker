@@ -18,8 +18,8 @@ namespace TrackerLibrary.DataAccess
         /// <returns>The prize information, including unique identifier</returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
-            //throw new NotImplementedException();
-            //4:43:31 database tables
+            // throw new NotImplementedException();
+            // 4:43:31 database tables
             model.Id = 1;
 
             return model;
