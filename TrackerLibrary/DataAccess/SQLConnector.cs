@@ -13,7 +13,7 @@ namespace TrackerLibrary.DataAccess
     {
         /// TODO - Make the CreatePrize metod actually  save to the database
         /// <summary>
-        /// Saves a new prize to the database jdshfaskdfhsakj
+        /// Saves a new prize to the database
         /// </summary>
         /// <param name="model">The Prize Information.</param>
         /// <returns>The prize information, including unique identifier</returns>
